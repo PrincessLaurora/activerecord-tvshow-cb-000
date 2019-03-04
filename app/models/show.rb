@@ -18,4 +18,8 @@ class Show < ActiveRecord::Base
   #Alternatively => Show.where("rating" = ?, Show.lowest_rating).first
   end
 
+  def self.ratings_sum
+      Show.sum("rating")
+
+
 end
